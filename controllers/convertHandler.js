@@ -23,7 +23,7 @@
    result=formula.split("/")[0]/formula.split("/")[1];
    return result;
    }
-   else if(/(\.)(.)*(\.)/.test(result))return "invalid number";//несколько точек - "invalid number". без () не работало. После деления, чтоб можно было делыть дробные
+   else if(/\..*\./.test(result))return "invalid number";//несколько точек - "invalid number". После деления, чтоб можно было делить дробные
   else result = result.match(/\d+(\.){0,1}\d*/)[0];
   return result?result:"invalid number";
   };
